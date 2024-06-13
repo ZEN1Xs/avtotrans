@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using WpfAppAvtoTrans.Model;
@@ -18,7 +17,7 @@ namespace WpfAppAvtoTrans.Pages
             string login = LoginTextBox.Text;
             string password = PasswordBox.Password;
 
-            var user = Model.DbConnection.AvtoTransEntities.Users
+            var user = DbConnection.AvtoTransEntities.Users
                          .FirstOrDefault(u => u.Login == login && u.Password == password);
 
             if (user != null)
@@ -38,7 +37,7 @@ namespace WpfAppAvtoTrans.Pages
                         NavigationService.Navigate(new OperatorPage());
                         break;
                     case 4: // Заказчик
-                        NavigationService.Navigate(new CustomerPage());
+                        NavigationService.Navigate(new CustomerPage(user));
                         break;
                     default:
                         MessageBox.Show("Неизвестная роль пользователя", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);

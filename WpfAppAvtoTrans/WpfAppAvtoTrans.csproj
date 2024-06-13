@@ -146,7 +146,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\OperatorRequestsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\RequestEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ViewRequestPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -167,8 +175,14 @@
     <Compile Include="Pages\OperatorPage.xaml.cs">
       <DependentUpon>OperatorPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\OperatorRequestsPage.xaml.cs">
+      <DependentUpon>OperatorRequestsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RequestEditPage.xaml.cs">
       <DependentUpon>RequestEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewRequestPage.xaml.cs">
+      <DependentUpon>ViewRequestPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

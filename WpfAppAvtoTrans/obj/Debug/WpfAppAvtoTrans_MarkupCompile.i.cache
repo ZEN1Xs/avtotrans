@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\App.xaml
-71533550242
+9486039602
 2-1526885669
-28-1824321237
+301656181699
 18968655817
-MainWindow.xaml;Pages\AuthorizePage.xaml;Pages\CustomerPage.xaml;Pages\ManagerPage.xaml;Pages\MechanicPage.xaml;Pages\OperatorPage.xaml;Pages\RequestEditPage.xaml;
+MainWindow.xaml;Pages\AuthorizePage.xaml;Pages\CustomerPage.xaml;Pages\ManagerPage.xaml;Pages\MechanicPage.xaml;Pages\OperatorPage.xaml;Pages\OperatorRequestsPage.xaml;Pages\RequestEditPage.xaml;Pages\ViewRequestPage.xaml;
 
 True
 

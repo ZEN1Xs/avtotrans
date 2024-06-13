@@ -30,3 +30,9 @@ D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\CustomerPag
 D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\ManagerPage.baml
 D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\MechanicPage.baml
 D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\OperatorPage.baml
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\RequestEditPage.baml
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\RequestEditPage.g.cs
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\ViewRequestPage.baml
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\ViewRequestPage.g.cs
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\OperatorRequestsPage.baml
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\OperatorRequestsPage.g.cs

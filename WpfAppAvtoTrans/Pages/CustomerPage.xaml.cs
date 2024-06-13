@@ -1,28 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WpfAppAvtoTrans.Model;
 
 namespace WpfAppAvtoTrans.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для CustomerPage.xaml
-    /// </summary>
     public partial class CustomerPage : Page
     {
-        public CustomerPage()
+        private User _currentUser;
+
+        public CustomerPage(User currentUser)
         {
             InitializeComponent();
+            _currentUser = currentUser;
+
+            WelcomeTextBlock.Text = $"Добро пожаловать, {_currentUser.FullName}";
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void AddRequestButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new RequestEditPage());
+        }
+
+        private void ViewRequestsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ViewRequestsPage(_currentUser));
         }
     }
 }

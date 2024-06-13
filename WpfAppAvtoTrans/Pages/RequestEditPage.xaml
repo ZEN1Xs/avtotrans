@@ -23,27 +23,32 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
+        <!-- Верхняя панель с кнопкой "Назад" -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="2">
+            <Button Content="Назад" HorizontalAlignment="Right" Click="BackButton_Click" />
+        </StackPanel>
+
         <!-- Вид автомобиля -->
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="Вид автомобиля:" Margin="5" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="0" Grid.Column="1" x:Name="CarTypeTextBox" Margin="5"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Вид автомобиля:" Margin="5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="CarTypeTextBox" Margin="5"/>
 
         <!-- Модель автомобиля -->
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Модель автомобиля:" Margin="5" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="CarModelTextBox" Margin="5"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Модель автомобиля:" Margin="5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="CarModelTextBox" Margin="5"/>
 
         <!-- Описание проблемы -->
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Описание проблемы:" Margin="5" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="2" Grid.Column="1" x:Name="ProblemDescriptionTextBox" Margin="5" Height="100" TextWrapping="Wrap" AcceptsReturn="True"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Описание проблемы:" Margin="5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="ProblemDescriptionTextBox" Margin="5" Height="100" TextWrapping="Wrap" AcceptsReturn="True"/>
 
         <!-- ФИО клиента -->
-        <TextBlock Grid.Row="3" Grid.Column="0" Text="ФИО клиента:" Margin="5" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="3" Grid.Column="1" x:Name="ClientNameTextBox" Margin="5"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="ФИО клиента:" Margin="5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="ClientNameTextBox" Margin="5"/>
 
         <!-- Номер телефона -->
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="Номер телефона:" Margin="5" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="4" Grid.Column="1" x:Name="PhoneNumberTextBox" Margin="5"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Номер телефона:" Margin="5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="5" Grid.Column="1" x:Name="PhoneNumberTextBox" Margin="5"/>
 
         <!-- Кнопка сохранения -->
-        <Button Grid.Row="5" Grid.Column="1" Content="Сохранить" Margin="5" Width="100" HorizontalAlignment="Right" Click="SaveButton_Click"/>
+        <Button Grid.Row="6" Grid.Column="1" Content="Сохранить" Margin="5" Width="100" HorizontalAlignment="Right" Click="SaveButton_Click"/>
     </Grid>
 </Page>
