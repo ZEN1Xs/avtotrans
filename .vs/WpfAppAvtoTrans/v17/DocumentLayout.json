@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\VS \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\WpfAppAvtoTrans\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A7EB6BE-7C2F-4B72-AAB6-EFC505581452}|WpfAppAvtoTrans\\WpfAppAvtoTrans.csproj|d:\\vs \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\wpfappavtotrans\\wpfappavtotrans\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1A7EB6BE-7C2F-4B72-AAB6-EFC505581452}|WpfAppAvtoTrans\\WpfAppAvtoTrans.csproj|solutionrelative:wpfappavtotrans\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1A7EB6BE-7C2F-4B72-AAB6-EFC505581452}|WpfAppAvtoTrans\\WpfAppAvtoTrans.csproj|D:\\VS \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\WpfAppAvtoTrans\\wpfappavtotrans\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7EB6BE-7C2F-4B72-AAB6-EFC505581452}|WpfAppAvtoTrans\\WpfAppAvtoTrans.csproj|solutionrelative:wpfappavtotrans\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A7EB6BE-7C2F-4B72-AAB6-EFC505581452}|WpfAppAvtoTrans\\WpfAppAvtoTrans.csproj|d:\\vs \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\wpfappavtotrans\\wpfappavtotrans\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A7EB6BE-7C2F-4B72-AAB6-EFC505581452}|WpfAppAvtoTrans\\WpfAppAvtoTrans.csproj|solutionrelative:wpfappavtotrans\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A7EB6BE-7C2F-4B72-AAB6-EFC505581452}|WpfAppAvtoTrans\\WpfAppAvtoTrans.csproj|d:\\vs \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\wpfappavtotrans\\wpfappavtotrans\\avtotransmodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{1A7EB6BE-7C2F-4B72-AAB6-EFC505581452}|WpfAppAvtoTrans\\WpfAppAvtoTrans.csproj|solutionrelative:wpfappavtotrans\\avtotransmodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7EB6BE-7C2F-4B72-AAB6-EFC505581452}|WpfAppAvtoTrans\\WpfAppAvtoTrans.csproj|d:\\vs \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\wpfappavtotrans\\wpfappavtotrans\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1A7EB6BE-7C2F-4B72-AAB6-EFC505581452}|WpfAppAvtoTrans\\WpfAppAvtoTrans.csproj|solutionrelative:wpfappavtotrans\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +22,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "AvtoTransModel.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\VS \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\WpfAppAvtoTrans\\WpfAppAvtoTrans\\AvtoTransModel.edmx",
+              "RelativeDocumentMoniker": "WpfAppAvtoTrans\\AvtoTransModel.edmx",
+              "ToolTip": "D:\\VS \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\WpfAppAvtoTrans\\WpfAppAvtoTrans\\AvtoTransModel.edmx [Diagram1]",
+              "RelativeToolTip": "WpfAppAvtoTrans\\AvtoTransModel.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-06-13T05:05:23.256Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\VS \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\WpfAppAvtoTrans\\WpfAppAvtoTrans\\MainWindow.xaml",
               "RelativeDocumentMoniker": "WpfAppAvtoTrans\\MainWindow.xaml",
@@ -34,13 +50,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\VS \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\WpfAppAvtoTrans\\WpfAppAvtoTrans\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "WpfAppAvtoTrans\\MainWindow.xaml.cs",
               "ToolTip": "D:\\VS \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\WpfAppAvtoTrans\\WpfAppAvtoTrans\\MainWindow.xaml.cs",
               "RelativeToolTip": "WpfAppAvtoTrans\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-12T13:42:05.984Z",
               "EditorCaption": ""

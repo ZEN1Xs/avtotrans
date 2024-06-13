@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище AvtoTransModelContainer" CdmEntityContainer="AvtoTransEntities">
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="AvtoTransModel.Car">
+        <MappingFragment StoreEntitySet="Cars">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CarType" ColumnName="CarType" />
+          <ScalarProperty Name="CarModel" ColumnName="CarModel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientReviews">
+      <EntityTypeMapping TypeName="AvtoTransModel.ClientReview">
+        <MappingFragment StoreEntitySet="ClientReviews">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ReviewDate" ColumnName="ReviewDate" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="AvtoTransModel.Client">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="AvtoTransModel.Comment">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="MechanicId" ColumnName="MechanicId" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mechanics">
+      <EntityTypeMapping TypeName="AvtoTransModel.Mechanic">
+        <MappingFragment StoreEntitySet="Mechanics">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QualityManagers">
+      <EntityTypeMapping TypeName="AvtoTransModel.QualityManager">
+        <MappingFragment StoreEntitySet="QualityManagers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RepairParts">
+      <EntityTypeMapping TypeName="AvtoTransModel.RepairPart">
+        <MappingFragment StoreEntitySet="RepairParts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestAssignments">
+      <EntityTypeMapping TypeName="AvtoTransModel.RequestAssignment">
+        <MappingFragment StoreEntitySet="RequestAssignments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="MechanicId" ColumnName="MechanicId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requests">
+      <EntityTypeMapping TypeName="AvtoTransModel.Request">
+        <MappingFragment StoreEntitySet="Requests">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ProblemDescription" ColumnName="ProblemDescription" />
+          <ScalarProperty Name="RequestStatus" ColumnName="RequestStatus" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="CarId" ColumnName="CarId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="AvtoTransModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="AvtoTransModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

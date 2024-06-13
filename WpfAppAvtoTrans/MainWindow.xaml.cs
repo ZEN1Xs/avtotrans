@@ -23,6 +23,13 @@ namespace WpfAppAvtoTrans
         public MainWindow()
         {
             InitializeComponent();
+
+            AvtoTransEntities db = new AvtoTransEntities();
+
+            List<Request> request = db.Requests.ToList();
+
+            int a = 5;
+
         }
     }
 }

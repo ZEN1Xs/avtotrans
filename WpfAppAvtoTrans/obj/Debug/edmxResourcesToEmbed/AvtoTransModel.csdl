@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AvtoTransModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CarModel" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__CarId__4BAC3F29" FromRole="Cars" ToRole="Requests" />
+  </EntityType>
+  <EntityType Name="ClientReview">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReviewDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Rating" Type="Int32" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RequestId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Request" Relationship="Self.FK__ClientRev__Reque__5EBF139D" FromRole="ClientReviews" ToRole="Requests" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__Client__4AB81AF0" FromRole="Clients" ToRole="Requests" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Message" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MechanicId" Type="Int32" Nullable="false" />
+    <Property Name="RequestId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Mechanic" Relationship="Self.FK__Comments__Mechan__5812160E" FromRole="Comments" ToRole="Mechanics" />
+    <NavigationProperty Name="Request" Relationship="Self.FK__Comments__Reques__59063A47" FromRole="Comments" ToRole="Requests" />
+  </EntityType>
+  <EntityType Name="Mechanic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__Mechan__5812160E" FromRole="Mechanics" ToRole="Comments" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Mechanics__UserI__4E88ABD4" FromRole="Mechanics" ToRole="Users" />
+    <NavigationProperty Name="RequestAssignments" Relationship="Self.FK__RequestAs__Mecha__52593CB8" FromRole="Mechanics" ToRole="RequestAssignments" />
+  </EntityType>
+  <EntityType Name="QualityManager">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK__QualityMa__UserI__5BE2A6F2" FromRole="QualityManagers" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="RepairPart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="RequestId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Request" Relationship="Self.FK__RepairPar__Reque__5535A963" FromRole="RepairParts" ToRole="Requests" />
+  </EntityType>
+  <EntityType Name="RequestAssignment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestId" Type="Int32" Nullable="false" />
+    <Property Name="MechanicId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Mechanic" Relationship="Self.FK__RequestAs__Mecha__52593CB8" FromRole="RequestAssignments" ToRole="Mechanics" />
+    <NavigationProperty Name="Request" Relationship="Self.FK__RequestAs__Reque__5165187F" FromRole="RequestAssignments" ToRole="Requests" />
+  </EntityType>
+  <EntityType Name="Request">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ProblemDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RequestStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CompletionDate" Type="DateTime" Precision="0" />
+    <Property Name="ClientId" Type="Int32" Nullable="false" />
+    <Property Name="CarId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Car" Relationship="Self.FK__Requests__CarId__4BAC3F29" FromRole="Requests" ToRole="Cars" />
+    <NavigationProperty Name="ClientReviews" Relationship="Self.FK__ClientRev__Reque__5EBF139D" FromRole="Requests" ToRole="ClientReviews" />
+    <NavigationProperty Name="Client" Relationship="Self.FK__Requests__Client__4AB81AF0" FromRole="Requests" ToRole="Clients" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__Reques__59063A47" FromRole="Requests" ToRole="Comments" />
+    <NavigationProperty Name="RepairParts" Relationship="Self.FK__RepairPar__Reque__5535A963" FromRole="Requests" ToRole="RepairParts" />
+    <NavigationProperty Name="RequestAssignments" Relationship="Self.FK__RequestAs__Reque__5165187F" FromRole="Requests" ToRole="RequestAssignments" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Users__RoleId__45F365D3" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Mechanics" Relationship="Self.FK__Mechanics__UserI__4E88ABD4" FromRole="Users" ToRole="Mechanics" />
+    <NavigationProperty Name="QualityManagers" Relationship="Self.FK__QualityMa__UserI__5BE2A6F2" FromRole="Users" ToRole="QualityManagers" />
+    <NavigationProperty Name="Role" Relationship="Self.FK__Users__RoleId__45F365D3" FromRole="Users" ToRole="Roles" />
+  </EntityType>
+  <Association Name="FK__Requests__CarId__4BAC3F29">
+    <End Role="Cars" Type="Self.Car" Multiplicity="1" />
+    <End Role="Requests" Type="Self.Request" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cars">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Requests">
+        <PropertyRef Name="CarId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClientRev__Reque__5EBF139D">
+    <End Role="Requests" Type="Self.Request" Multiplicity="1" />
+    <End Role="ClientReviews" Type="Self.ClientReview" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requests">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClientReviews">
+        <PropertyRef Name="RequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Requests__Client__4AB81AF0">
+    <End Role="Clients" Type="Self.Client" Multiplicity="1" />
+    <End Role="Requests" Type="Self.Request" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Requests">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comments__Mechan__5812160E">
+    <End Role="Mechanics" Type="Self.Mechanic" Multiplicity="1" />
+    <End Role="Comments" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mechanics">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="MechanicId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comments__Reques__59063A47">
+    <End Role="Requests" Type="Self.Request" Multiplicity="1" />
+    <End Role="Comments" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requests">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="RequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mechanics__UserI__4E88ABD4">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Mechanics" Type="Self.Mechanic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mechanics">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RequestAs__Mecha__52593CB8">
+    <End Role="Mechanics" Type="Self.Mechanic" Multiplicity="1" />
+    <End Role="RequestAssignments" Type="Self.RequestAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mechanics">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RequestAssignments">
+        <PropertyRef Name="MechanicId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QualityMa__UserI__5BE2A6F2">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="QualityManagers" Type="Self.QualityManager" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QualityManagers">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RepairPar__Reque__5535A963">
+    <End Role="Requests" Type="Self.Request" Multiplicity="1" />
+    <End Role="RepairParts" Type="Self.RepairPart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requests">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RepairParts">
+        <PropertyRef Name="RequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RequestAs__Reque__5165187F">
+    <End Role="Requests" Type="Self.Request" Multiplicity="1" />
+    <End Role="RequestAssignments" Type="Self.RequestAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requests">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RequestAssignments">
+        <PropertyRef Name="RequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__RoleId__45F365D3">
+    <End Role="Roles" Type="Self.Role" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AvtoTransEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cars" EntityType="Self.Car" />
+    <EntitySet Name="ClientReviews" EntityType="Self.ClientReview" />
+    <EntitySet Name="Clients" EntityType="Self.Client" />
+    <EntitySet Name="Comments" EntityType="Self.Comment" />
+    <EntitySet Name="Mechanics" EntityType="Self.Mechanic" />
+    <EntitySet Name="QualityManagers" EntityType="Self.QualityManager" />
+    <EntitySet Name="RepairParts" EntityType="Self.RepairPart" />
+    <EntitySet Name="RequestAssignments" EntityType="Self.RequestAssignment" />
+    <EntitySet Name="Requests" EntityType="Self.Request" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__Requests__CarId__4BAC3F29" Association="Self.FK__Requests__CarId__4BAC3F29">
+      <End Role="Cars" EntitySet="Cars" />
+      <End Role="Requests" EntitySet="Requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClientRev__Reque__5EBF139D" Association="Self.FK__ClientRev__Reque__5EBF139D">
+      <End Role="Requests" EntitySet="Requests" />
+      <End Role="ClientReviews" EntitySet="ClientReviews" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Requests__Client__4AB81AF0" Association="Self.FK__Requests__Client__4AB81AF0">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Requests" EntitySet="Requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comments__Mechan__5812160E" Association="Self.FK__Comments__Mechan__5812160E">
+      <End Role="Mechanics" EntitySet="Mechanics" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comments__Reques__59063A47" Association="Self.FK__Comments__Reques__59063A47">
+      <End Role="Requests" EntitySet="Requests" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mechanics__UserI__4E88ABD4" Association="Self.FK__Mechanics__UserI__4E88ABD4">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Mechanics" EntitySet="Mechanics" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RequestAs__Mecha__52593CB8" Association="Self.FK__RequestAs__Mecha__52593CB8">
+      <End Role="Mechanics" EntitySet="Mechanics" />
+      <End Role="RequestAssignments" EntitySet="RequestAssignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QualityMa__UserI__5BE2A6F2" Association="Self.FK__QualityMa__UserI__5BE2A6F2">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="QualityManagers" EntitySet="QualityManagers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RepairPar__Reque__5535A963" Association="Self.FK__RepairPar__Reque__5535A963">
+      <End Role="Requests" EntitySet="Requests" />
+      <End Role="RepairParts" EntitySet="RepairParts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RequestAs__Reque__5165187F" Association="Self.FK__RequestAs__Reque__5165187F">
+      <End Role="Requests" EntitySet="Requests" />
+      <End Role="RequestAssignments" EntitySet="RequestAssignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__RoleId__45F365D3" Association="Self.FK__Users__RoleId__45F365D3">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
