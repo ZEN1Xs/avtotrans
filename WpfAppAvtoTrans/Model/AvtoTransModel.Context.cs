@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfAppAvtoTrans
+namespace WpfAppAvtoTrans.Model
 {
     using System;
     using System.Data.Entity;

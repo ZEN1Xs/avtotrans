@@ -64,42 +64,44 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AvtoTransModel.cs">
+    <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Model\AvtoTransModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Car.cs">
+    <Compile Include="Model\Car.cs">
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Client.cs">
+    <Compile Include="Model\Client.cs">
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ClientReview.cs">
+    <Compile Include="Model\ClientReview.cs">
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Comment.cs">
+    <Compile Include="Model\Comment.cs">
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mechanic.cs">
+    <Compile Include="Model\DbConection.cs" />
+    <Compile Include="Model\Mechanic.cs">
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="QualityManager.cs">
+    <Compile Include="Model\QualityManager.cs">
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="RepairPart.cs">
+    <Compile Include="Model\RepairPart.cs">
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Request.cs">
+    <Compile Include="Model\Request.cs">
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="RequestAssignment.cs">
+    <Compile Include="Model\RequestAssignment.cs">
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Role.cs">
+    <Compile Include="Model\Role.cs">
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="User.cs">
+    <Compile Include="Model\User.cs">
       <DependentUpon>AvtoTransModel.tt</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -110,12 +112,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AvtoTransModel.Context.cs">
+    <Compile Include="Model\AvtoTransModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AvtoTransModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="AvtoTransModel.Designer.cs">
+    <Compile Include="Model\AvtoTransModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AvtoTransModel.edmx</DependentUpon>
@@ -124,8 +126,50 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AuthorizePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CustomerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ManagerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MechanicPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OperatorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RequestEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AuthorizePage.xaml.cs">
+      <DependentUpon>AuthorizePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomerPage.xaml.cs">
+      <DependentUpon>CustomerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManagerPage.xaml.cs">
+      <DependentUpon>ManagerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MechanicPage.xaml.cs">
+      <DependentUpon>MechanicPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OperatorPage.xaml.cs">
+      <DependentUpon>OperatorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequestEditPage.xaml.cs">
+      <DependentUpon>RequestEditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -143,11 +187,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="AvtoTransModel.edmx">
+    <EntityDeploy Include="Model\AvtoTransModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AvtoTransModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="AvtoTransModel.edmx.diagram">
+    <None Include="Model\AvtoTransModel.edmx.diagram">
       <DependentUpon>AvtoTransModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -160,19 +204,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AvtoTransModel.Context.tt">
+    <Content Include="Model\AvtoTransModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AvtoTransModel.Context.cs</LastGenOutput>
       <DependentUpon>AvtoTransModel.edmx</DependentUpon>
     </Content>
-    <Content Include="AvtoTransModel.tt">
+    <Content Include="Model\AvtoTransModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AvtoTransModel.edmx</DependentUpon>
       <LastGenOutput>AvtoTransModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\logo.PNG" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

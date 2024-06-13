@@ -7,24 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfAppAvtoTrans
+namespace WpfAppAvtoTrans.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Client
+    public partial class Mechanic
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Client()
+        public Mechanic()
         {
-            this.Requests = new HashSet<Request>();
+            this.Comments = new HashSet<Comment>();
+            this.RequestAssignments = new HashSet<RequestAssignment>();
         }
     
         public int Id { get; set; }
-        public string FullName { get; set; }
-        public string PhoneNumber { get; set; }
+        public int UserId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Request> Requests { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RequestAssignment> RequestAssignments { get; set; }
     }
 }

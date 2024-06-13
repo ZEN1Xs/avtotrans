@@ -20,3 +20,13 @@ D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\WpfAppAvtoTrans.c
 D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\WpfAppAv.CC2DC014.Up2Date
 D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\WpfAppAvtoTrans.exe
 D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\WpfAppAvtoTrans.pdb
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\AuthorizePage.g.cs
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\CustomerPage.g.cs
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\ManagerPage.g.cs
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\MechanicPage.g.cs
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\OperatorPage.g.cs
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\AuthorizePage.baml
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\CustomerPage.baml
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\ManagerPage.baml
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\MechanicPage.baml
+D:\VS проекты\WpfAppAvtoTrans\WpfAppAvtoTrans\obj\Debug\Pages\OperatorPage.baml
